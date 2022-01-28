@@ -14,7 +14,7 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - ./data:/var/lib/mysql
+      - data:/var/lib/mysql
 
   phpmyadmin:
     container_name: phpmyadmin_container
@@ -30,4 +30,7 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - ./data:/var/lib/phpmyadmin
+      - data:/var/lib/phpmyadmin
+
+volumes:
+  data:
